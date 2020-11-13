@@ -7,7 +7,7 @@ namespace BookLibrary.Models
     public class ContactModel
     {
         /// <summary>
-        /// Specific identifier for use in the database.
+        /// Specific identifier for person
         /// </summary>
         public int Id { get; set; }
         /// <summary>
@@ -23,43 +23,43 @@ namespace BookLibrary.Models
         /// </summary>
         public string BirthDate { get; set; }
         /// <summary>
-        /// Specific cell phone number found within the contact information entry
+        /// Specific cell phone number for person
         /// </summary>
         public string CellPhone { get; set; }
         /// <summary>
-        /// Specific home phone number found within the contact information entry
+        /// Specific home phone number for person
         /// </summary>
         public string HomePhone { get; set; }
         /// <summary>
-        /// Specific office phone number found within the contact information entry
+        /// Specific office phone number for person
         /// </summary>
         public string OfficePhone { get; set; }
         /// <summary>
-        /// Specific email address found within the contact information entry
+        /// Specific email address for person
         /// </summary>
         public string EmailAddress { get; set; }
         /// <summary>
-        /// Specific first line of street address found within the mailing information entry
+        /// Specific first line of street address for person
         /// </summary>
         public string StreetAddressOne { get; set; }
         /// <summary>
-        /// Specific second line of street address found within the mailing information entry
+        /// Specific second line of street address for person
         /// </summary>
         public string StreetAddressTwo { get; set; }
         /// <summary>
-        /// Specific city found within the mailing information entry
+        /// Specific city for person
         /// </summary>
         public string City { get; set; }
         /// <summary>
-        /// Specific state found within the mailing information entry
+        /// Specific state for person
         /// </summary>
         public string State { get; set; }
         /// <summary>
-        /// Specific zip code found within the mailing information entry
+        /// Specific zip code for person
         /// </summary>
         public string ZipCode { get; set; }
         /// <summary>
-        /// Combination of First and Last name properties
+        /// Combination of FirstName and LastName
         /// </summary>
         public string FullNameFirst
         {
@@ -69,7 +69,7 @@ namespace BookLibrary.Models
             }
         }
         /// <summary>
-        /// Combination of Last and First name properties
+        /// Combination of LastName and FirstName
         /// </summary>
         public string FullNameLast
         {

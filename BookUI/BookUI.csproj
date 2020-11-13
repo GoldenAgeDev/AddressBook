@@ -6,4 +6,22 @@
     <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="AddressBookDB.db" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="AddressBookDB.db">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Data.SQLite.Core" Version="1.0.113.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BookLibrary\BookLibrary.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -45,10 +45,10 @@ namespace BookLibrary
             return fullValidation;
         }
         /// <summary>
-        /// Validates First and Last Name
+        /// Validates First Name and Last Name
         /// </summary>
         /// <returns>
-        /// Returns true for correct name entry
+        /// Returns ValidationModel result and message
         /// </returns>
         private static ValidationModel ValidateName(ContactModel p)
         {
@@ -80,10 +80,10 @@ namespace BookLibrary
             return nameCheck;
         }
         /// <summary>
-        /// Validates BirthDate field
+        /// Validates BirthDate
         /// </summary>
         /// <returns>
-        /// Various messages indicate entry or leap year errors
+        /// Returns ValidationModel result and message
         /// </returns>
         private static ValidationModel ValidateDate(ContactModel p)
         {
@@ -175,10 +175,10 @@ namespace BookLibrary
             return dateCheck;
         }
         /// <summary>
-        /// Validates PhoneNumber fields to ensure completion
+        /// Validates all PhoneNumber fields
         /// </summary>
         /// <returns>
-        /// Returns true if phone numbers are standard 10 digit numbers
+        /// Returns ValidationModel result and message
         /// </returns>
         private static ValidationModel ValidatePhone(ContactModel p)
         {
@@ -225,13 +225,13 @@ namespace BookLibrary
             return phoneCheck;
         }
         /// <summary>
-        /// Adds non-empty phone numbers to list of string numbers
+        /// Adds non-null phone nums to list of string numbers
         /// </summary>
         /// <param name="nums">
-        /// List to hold phone numbers as strings
+        /// List to hold phone nums as strings
         /// </param>
         /// <param name="p">
-        /// Contact model from which to draw phone numbers
+        /// ContactModel object
         /// </param>
         /// <returns>
         /// Returns completed list of phone number strings, excluding any empty phone numbers
@@ -260,7 +260,7 @@ namespace BookLibrary
         /// Runs established algorithm for determining Gregorian Leap Years
         /// </summary>
         /// <param name="year">
-        /// Year in question
+        /// Year from BirthDate
         /// </param>
         /// <returns>
         /// True if leap year, false if not
@@ -291,10 +291,10 @@ namespace BookLibrary
         /// Indicates if a month has thirty days
         /// </summary>
         /// <param name="month">
-        /// Month in question is passed to function
+        /// Month from BirthDate
         /// </param>
         /// <returns>
-        /// True or false indicates whether month has thirty days
+        /// True if thirty day month, false if thirty-one day month
         /// </returns>
         private static bool IsThirtyDay(int month)
         {
@@ -310,13 +310,13 @@ namespace BookLibrary
         /// Checks an array for a specific number
         /// </summary>
         /// <param name="month">
-        /// Passed as a number 1 - 12
+        /// Passed as num between 1 - 12
         /// </param>
         /// <param name="array">
-        /// The array of month numerals. This function can be adapted to check for thirty one day months.
+        /// Array of month nums
         /// </param>
         /// <returns>
-        /// True or false whether number is in the array
+        /// True if num in array or false if num not in array
         /// </returns>
         private static bool InArray(int month, int[] array)
         {
@@ -335,16 +335,16 @@ namespace BookLibrary
             return false;
         }
         /// <summary>
-        /// Checks length of string of numbers
+        /// Checks length of string of nums
         /// </summary>
         /// <param name="input">
-        /// Initial string of numbers
+        /// Initial string of nums
         /// </param>
         /// <param name="i">
-        /// Goal length of the string of numbers
+        /// Goal length of the string of nums
         /// </param>
         /// <returns>
-        /// True or false based on the length matching the goal
+        /// True if num = goal length, false if not goal length
         /// </returns>
         private static bool CheckNumLen(string input, int i)
         {
@@ -362,13 +362,13 @@ namespace BookLibrary
         /// </summary>
         private static readonly Regex rxNonDigits = new Regex(@"[^\d]+");
         /// <summary>
-        /// Utilizes Regex to eliminate special cahracters in order to return a string of digits
+        /// Eliminates special cahracters to return a string of nums
         /// </summary>
         /// <param name="str">
-        /// String sent to method from masked textbox
+        /// String object including puntuation
         /// </param>
         /// <returns>
-        /// String of only digits
+        /// String of nums
         /// </returns>
         private static string CleanNumbers(string str)
         {
