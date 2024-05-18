@@ -21,7 +21,7 @@ When considering how to release the application, I decided to implement a databa
 - Select a contact from the list to see their information
 
 ### Known Issues:
-- Labels next to entry and display fields appears cut off
+- Labels next to entry and display fields may appear cut off
 
 ### Contact
 Ernie Peterson - ernie.peterson05@gmail.com
