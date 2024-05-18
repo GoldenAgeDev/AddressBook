@@ -20,6 +20,9 @@ When considering how to release the application, I decided to implement a databa
 - Sort contacts by last name, ascending or descending
 - Select a contact from the list to see their information
 
+### Known Issues:
+- Labels next to entry and display fields appears cut off
+
 ### Contact
 Ernie Peterson - ernie.peterson05@gmail.com
 
